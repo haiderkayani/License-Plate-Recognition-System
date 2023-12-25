@@ -5,7 +5,7 @@ import imutils
 import easyocr
 
 # READ IMAGE AND CONVERT TO GRAYSCALE AND THEN BLUR ----------------------
-image = cv2.imread("images/self2.jpg")
+image = cv2.imread("images/self6.jpg")
 grayscale_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 plt.imshow(grayscale_image, cmap='gray')
 plt.title('Grayscale image')
@@ -21,7 +21,7 @@ plt.imshow(cv2.cvtColor(edged_image, cv2.COLOR_BGR2RGB))
 plt.title('Image after canny edge detection')
 plt.show()
 
-# FINDING CONTOUR COORDINATES TO DETECT NUMBERPLATE --------------------------
+# FINDING CONTOUR COORDINATES FOR DETECTING NUMBERPLATE --------------------------
 keypoints = cv2.findContours(edged_image.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 contours = imutils.grab_contours(keypoints)
 contours = sorted(contours, key=cv2.contourArea, reverse=True)[:10]
