@@ -5,7 +5,7 @@ import imutils
 import easyocr
 
 # READ IMAGE AND CONVERT TO GRAYSCALE AND THEN BLUR ----------------------
-image = cv2.imread("images/2.jpg")
+image = cv2.imread("images/11.jpg")
 grayscale_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # plt.figure()
 plt.imshow(grayscale_image, cmap='gray')
